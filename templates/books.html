@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title> Book Menegment </title>
+    </head>
+    <body>
+        <h2>Kitoblar sahifasi </h2>
+        <a href= {% url "books:home_pages" %} >Bosh Sahifa</a> 
+
+        <h3>Kitoblar Ro'yxati</h3>
+
+        <ul>
+            {% for book in books  %}
+            <li>
+                <a href={% url "books:detail" book.id %}>
+                {{book.name}}
+                </a>
+            </li>
+            {% endfor %}
+        </li>
+        
+    </body>
+</html>
